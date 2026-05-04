@@ -21,6 +21,7 @@ def getData():
     actions = []
     for date, values in time_series.items():
         action_date = {
+            "symbol": SYMBOL,
             "date": date,
             "open": float(values.get("1. open")),
             "high": float(values.get("2. high")),

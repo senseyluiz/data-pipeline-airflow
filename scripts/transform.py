@@ -8,7 +8,8 @@ def transform_actions():
     df = pd.DataFrame(actions)
 
     # Convertendo os tipos
-    df['date'] = pd.to_datetime(df['date'])
+    df["symbol"] = df["symbol"].str.upper()
+    df["date"] = pd.to_datetime(df["date"])
     df['open'] = df['open'].astype(float)
     df['high'] = df['high'].astype(float)
     df['low'] = df['low'].astype(float)
