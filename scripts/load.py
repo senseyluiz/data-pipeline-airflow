@@ -28,7 +28,7 @@ metadata.reflect(bind=engine)
 table = metadata.tables["stock_prices"]
 
 def load_data():
-    df = pd.read_csv("../database/actions.csv")
+    df = pd.read_csv("/opt/airflow/database/actions.csv")
 
     # 🔹 Garantir tipo correto da data
     df["date"] = pd.to_datetime(df["date"]).dt.date

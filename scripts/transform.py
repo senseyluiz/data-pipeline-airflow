@@ -2,7 +2,7 @@ import json
 import pandas as pd
 
 def transform_actions():
-    with open('../database/actions.json', 'r') as infile:
+    with open('/opt/airflow/database/actions.json', 'r') as infile:
         actions = json.load(infile)
 
     df = pd.DataFrame(actions)

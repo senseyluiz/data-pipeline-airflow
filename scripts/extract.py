@@ -35,7 +35,7 @@ def getData():
 if __name__ == "__main__":
     actions = getData()
 
-    with open("../database/actions.json", "w") as outfile:
+    with open("/opt/airflow/database/actions.json", "w") as outfile:
         json.dump(actions, outfile, indent=4)
 
     print("\33[32m Dados extraídos e salvos com sucesso! \33[m")
